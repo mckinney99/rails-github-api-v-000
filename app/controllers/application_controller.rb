@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
       github_url = "https://github.com/login/oauth/authorize?client_id=#{client_id}&redirect_uri=#{redirect_uri}&scope=repo"
       redirect_to github_url if !logged_in?
     end
-    end
 
     def logged_in?
       !!session[:token]
     end
+  end
